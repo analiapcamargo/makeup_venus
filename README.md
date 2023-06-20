@@ -2,7 +2,7 @@
 ### --- Still in Progress ---
 
 ## Links
- [API used](https://makeup-api.herokuapp.com/)
+ [Makeup API Used](https://makeup-api.herokuapp.com/)
 
 ## *Code key points :*
 * http request
