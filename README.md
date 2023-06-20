@@ -22,11 +22,11 @@ node index.js
 ![Preview](/views/assets/preview1.png "Preview 1")
 
 
-![Preview](/views/assets/preview3.png "Preview 2")
+![Preview](/views/assets/preview2.png "Preview 2")
 
 
 
-![Preview](/views/assets/preview2.png "Preview 3")
+![Preview](/views/assets/preview3.png "Preview 3")
 
 
 
