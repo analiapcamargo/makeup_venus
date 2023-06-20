@@ -1,6 +1,11 @@
 # E-Commerce Model
 ### --- Still in Progress ---
 
+## How to Install and Run the Project
+```
+npm init
+node index.js
+```
 ## Links
  [Makeup API Used](https://makeup-api.herokuapp.com/)
 
