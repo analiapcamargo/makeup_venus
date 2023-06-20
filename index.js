@@ -1,5 +1,5 @@
 import express from "express";
-import { listUsers, createUser } from "./services/user.js";
+import userController from './controllers/user.js'
 const app = express();
 
 //pra pegar o css e js dos outros arquivos
@@ -15,33 +15,9 @@ app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-app.get("/signup", async function (req, res) {
-  res.render("signup");
-});
+//chamando controller
+app.use('/', userController)
 
-app.get("/home", function (req, res) {
-  res.render("index");
-});
-
-app.get("/login", function (req, res) {
-  res.render("login");
-});
-
-app.post("/add", async function (req, res) {
-  const { name, sname, email, password } = req.body;
-
-  await createUser(name, sname, email, password);
-  res.status(201).send("user created");
-});
-
-app.get("/", async function (req, res) {
-  const userList = await listUsers();
-  res.send(userList);
-});
-
-app.get("/status", async function (req, res) {
-  return res.status(200).json({ status: "online" });
-});
 
 app.listen(3000, function () {
   console.log("Server is running");

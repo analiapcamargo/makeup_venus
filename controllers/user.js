@@ -1,9 +1,42 @@
-import { Router }  from "express"
+import { Router } from "express";
+import express from "express";
+import { listUsers, createUser } from "../services/user.js";
 
-const router = new Router()
+const router = Router();
 
-router.get('/', (req,res) => {
-    return res.status(200)
-})
+router.use(express.urlencoded({ extended: false }));
+router.use(express.json());
 
-export default router 
+router.get("/teste", (req, res) => {
+  return res.status(200).send("ok");
+});
+
+router.get("/signup", async function (req, res) {
+  res.render("signup");
+});
+
+router.get("/home", function (req, res) {
+  res.render("index");
+});
+
+router.get("/login", function (req, res) {
+  res.render("login");
+});
+
+router.post("/add", async function (req, res) {
+  const { name, sname, email, password } = req.body;
+
+  await createUser(name, sname, email, password);
+  res.status(201).send("user created");
+});
+
+router.get("/user", async function (req, res) {
+  const userList = await listUsers();
+  res.send(userList);
+});
+
+router.get("/status", async function (req, res) {
+  return res.status(200).json({ status: "online" });
+});
+
+export default router;
