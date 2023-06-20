@@ -1,5 +1,5 @@
 # E-Commerce Model
-### --- Still in progress, currenctly working on signup/login user using mongodb  ---
+#### --- Still in progress, currenctly working on signup/login user using mongodb  ---
 
 ## How to Install and Run the Project
 ```
