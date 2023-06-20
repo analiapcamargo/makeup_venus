@@ -4,7 +4,6 @@
 ## How to Install and Run the Project
 ```
 npm init
-
 ```
 ```
 node index.js
