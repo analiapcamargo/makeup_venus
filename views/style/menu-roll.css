@@ -1,0 +1,80 @@
+.MultiCarousel { 
+    float: left; 
+    overflow: hidden; 
+    padding: 15px; 
+    width: 100%; 
+    position:relative; 
+}
+    
+.MultiCarousel .MultiCarousel-inner { 
+    transition: 1s ease all; float: left; 
+}
+        
+.MultiCarousel .MultiCarousel-inner .item { 
+    float: left;
+}
+        
+.MultiCarousel .MultiCarousel-inner .item > div { 
+    text-align: center; 
+    padding:10px; 
+    margin:10px;
+     background:white; 
+     color:#666;
+}
+
+    
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { 
+    position:absolute;
+     border-radius:50%;
+     top:calc(50% - 20px); 
+    }
+
+.MultiCarousel .leftLst { 
+    left:0; 
+}
+    
+.MultiCarousel .rightLst { 
+    right:0; 
+}
+    
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { 
+    pointer-events: none; 
+    background:#ccc; 
+}
+
+.c2{
+    background-color:#94B9FF ;
+   
+}
+
+.title{
+    text-align: center;
+    font-size:clamp(1rem, 2.5vw, 2rem);
+}
+
+.container{
+    margin:4% auto;
+}
+
+.prod-viewer{
+    width:clamp(10rem, 2.5vw, 20rem);
+    margin:2%;
+}
+
+.pad15 *{
+    margin:1%;
+}
+
+
+
+@media screen and (max-width:800px){
+
+    p.title{
+        font-size:clamp(1.4rem, 2.5vw, 2rem);
+    }
+
+    .prod-viewer{
+        width:clamp(8rem, 2.5vw, 15rem);
+       
+    }
+}

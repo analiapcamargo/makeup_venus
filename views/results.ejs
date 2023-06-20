@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="style/carousel.css" />
+    <link rel="stylesheet" href="style/menu-roll.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+    <link rel="stylesheet" href="style/dropdown.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Cinzel+Decorative:wght@400;700&family=Comforter&family=Dancing+Script:wght@700&family=Lobster&family=Luckiest+Guy&family=Noto+Sans+SC&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Satisfy&family=Share+Tech+Mono&family=Space+Mono&family=Titan+One&family=Yanone+Kaffeesatz:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="scripts/menu-roll.js"></script>
+    <script src="scripts/dropdown.js"></script>
+    <script src="scripts/home-results.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="a-logo">
+        <img src="/assets/logo.png" alt="logo picture" class="logo">
+    </a>                                                        
+      <div class="header-actions">
+        <div class="itens">
+
+          
+          <div class="search">
+            <a href="#" class="a-search-icon">
+              <img src="assets/search.svg"alt="search icon"class="search-icon"/>
+            </a>
+            <input type="text" class="input-search" placeholder="Search" />
+          </div>
+          <div class="info">
+            <a href="#" class="a-menu" onclick="changeDropdown()" >
+              <img src="assets/menu.svg" alt="menu icon" class="menu-icon" />
+            </a>
+            <a href="login.html" class="a-user">
+              <img src="assets/user.svg" alt="user icon" class="user" />
+            </a>
+            <a href="#" class="a-cart">
+              <img src="assets/cart.svg" alt="cart icon" class="cart-icon" />
+            </a>
+          </div>
+        </div>
+
+        <div class="menu" id="menu-responsive">
+          <a href="index.html" class="catlink">Home</a>
+
+          <div class="dropdown">
+            <button onclick="myFunction(1)" class="dropbtn">
+              Best Sellers
+            </button>
+
+            <div id="myDropdown1" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+
+    
+
+          <div class="dropdown">
+            <button onclick="myFunction(2)" class="dropbtn">Makeup</button>
+
+            <div id="myDropdown2" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button onclick="myFunction(3)" class="dropbtn">Brands</button>
+
+            <div id="myDropdown3" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+
+          <a href="#" class="catlink">Cruelty-Free</a>
+
+          <a href="#" class="catlink">Vegan</a>
+        </div>
+      </div>
+    </header>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <footer>
+      <div class="footer-action">
+        <div class="footer-subscribe">
+          <p class="footer-text">Sign up for email updates</p>
+          <input
+            type="text"
+            class="email-footer"
+            placeholder="email@example.com"
+          />
+          <button class="btn-footer">Join Us</button>
+        </div>
+        <div class="section">
+          <div class="footer-about">
+            <p class="footer-text">About</p>
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Service</a>
+          </div>
+          <div class="footer-help">
+            <p class="footer-text">Help</p>
+            <a href="#" class="footer-link">Shipping</a>
+            <a href="#" class="footer-link">Returns</a>
+            <a href="#" class="footer-link">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="social-medias">
+        <img
+          src="assets/icon/fb.webp"
+          alt="facebook icon"
+          class="footer-icon"
+        />
+        <img
+          src="assets/icon/insta.png"
+          alt="instagram icon"
+          class="footer-icon"
+        />
+        <img
+          src="assets/icon/tiktok.png"
+          alt="tiktok icon"
+          class="footer-icon"
+        />
+        <img src="assets/icon/yt.png" alt="youtube icon" class="footer-icon" />
+      </div>
+      <div class="copyright">&copy; Venus 2023 All Rights Reserved</div>
+    </footer>
+  </body>
+</html>

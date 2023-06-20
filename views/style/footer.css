@@ -1,0 +1,147 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width:100%;
+}
+
+
+.footer-action{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-subscribe{
+    display: flex;
+    flex-direction: column;
+    margin:1% 4%;
+    justify-content: center;
+    align-items: center;
+    width:40%;
+}
+
+.footer-about, .footer-help{
+    display:flex;
+    flex-direction: column;
+    margin:1% 4%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icon{
+    width:clamp(0.9rem, 2.5vw, 1.3rem);
+    margin:5%;
+}
+
+.footer-text{
+    font-size:clamp(0.9rem, 2.5vw, 1.3rem);
+}
+
+footer input{
+    margin:3%;
+    padding:2%;
+    text-align: center;
+}
+
+.btn-footer{
+    padding:1% 4%;
+    border-radius:10px;
+    background-color:#a0e8e800 ;
+    color:#5307ea;
+    border-color:#5307ea;
+}
+
+.btn-footer:hover{
+    opacity:50%;
+    transition:all 0.5s;
+    background-color: #5307ea;
+    color:white;
+}
+
+.footer-link{
+    color:#5E17EB;
+    text-decoration: none;
+    margin:1% 0;
+}
+
+.social-medias{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:1%;
+    cursor: pointer;
+}
+
+.copyright{
+    padding:0.5%;
+    background-color:#e0d5f9 ;
+    width:100%;
+    text-align: center;
+}
+
+.section{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+}
+
+
+@media screen and (max-width:800px){
+
+
+    .footer-action{
+        flex-direction: column;
+        
+    }
+
+    footer input{
+
+        padding:1%;
+        text-align: center;
+        font-size:clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .btn-footer{
+        padding:1% 2%;
+        font-size:clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .footer-subscribe{
+        width:100%;
+    }
+
+
+    .footer-text{
+        font-size:clamp(1rem, 2.5vw, 2rem);
+        margin-bottom: 0;
+        color:#4a05d4;
+        
+    }
+
+    .footer-icon{
+        width:clamp(1.2rem, 2.5vw, 3rem);
+        margin:10%;
+    }
+
+    .section{
+        font-size:clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .copyright{
+        font-size:clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+
+}
