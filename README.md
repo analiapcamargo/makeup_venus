@@ -6,6 +6,9 @@
 npm init
 ```
 ```
+npm install mongoose
+```
+```
 node index.js
 ```
 ## Links
