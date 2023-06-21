@@ -1,6 +1,6 @@
 import { Router } from "express";
 import express from "express";
-import { listUsers, createUser } from "../services/user.js";
+import { checkUser, createUser } from "../services/user.js";
 
 const router = Router();
 
@@ -29,6 +29,14 @@ router.post("/add", async function (req, res) {
   await createUser(name, sname, email, password);
   res.status(201).send("user created");
 });
+
+router.get("/check", async function (req, res) {
+  const { email, password } = req.body;
+
+  await checkUser(email, password);
+  
+});
+
 
 router.get("/user", async function (req, res) {
   const userList = await listUsers();
