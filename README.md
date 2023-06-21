@@ -12,7 +12,7 @@ node index.js
  [Makeup API Used](https://makeup-api.herokuapp.com/)
 
 ## *Code key points :*
-* http request
+* MongoDB
 * Node.js
 * EJS
 * Bootstrap (carrousels) 
