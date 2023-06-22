@@ -6,13 +6,16 @@
 npm init
 ```
 ```
+npm install mongoose
+```
+```
 node index.js
 ```
 ## Links
  [Makeup API Used](https://makeup-api.herokuapp.com/)
 
 ## *Code key points :*
-* http request
+* MongoDB
 * Node.js
 * EJS
 * Bootstrap (carrousels) 
