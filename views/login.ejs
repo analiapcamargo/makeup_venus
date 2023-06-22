@@ -119,13 +119,13 @@
 </header>
 
 
-  <form action="/check" method="GET">
+  <form action="/check" method="POST">
     <div class="login-main">
 
    
       <p class="title">Sign in to your Account</p>
-      <input type="text" class="email" placeholder="Email">
-      <input type="text" class="password" placeholder="Password">
+      <input type="text" class="email" placeholder="Email" name="email">
+      <input type="password" class="password" placeholder="Password" name="password">
       <a href="#" class="forgot-password">Forgot your password?</a>
       <input type="submit" value="Submit" class="sign-in">
       <a href="/signup" class="create">Don't have an account? Creat one.</a>

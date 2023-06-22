@@ -15,24 +15,23 @@ const logInSchema = new mongoose.Schema({
   name: { type: String, required: true },
   sname: { type: String, required: true },
   email: { type: String, required: true },
-  password: { type: Number, required: true },
+  password: { type: String, required: true },
 });
 
 const LogInCollection = new mongoose.model("LogInCollection", logInSchema);
 
 export const checkUser = async (email, password) => {
   try {
-    const user = await LogInCollection.findOne({ email: email });
-    console.log(user)
+    const user = await LogInCollection.findOne({ email: email }); 
     if(user){
       if (user.password === password) {
-        console.log(user.email + " " + user.password);
+        return true
       } else {
-        console.log("incorrect password");
+        return false
       }
     }
   } catch (err) {
-    console.log(err);
+    return false
   }
 };
 
@@ -46,9 +45,9 @@ export const createUser = async (name, sname, email, password) => {
 
   const userExists = await LogInCollection.findOne({ email: email });
   if (userExists) {
-    console.log("email already in use");
-    console.log(userExists.email)
+    return false
   } else {
     LogInCollection.insertMany([data]);
+    return true
   }
 };

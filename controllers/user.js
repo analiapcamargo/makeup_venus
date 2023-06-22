@@ -26,14 +26,21 @@ router.get("/login", function (req, res) {
 router.post("/add", async function (req, res) {
   const { name, sname, email, password } = req.body;
 
-  await createUser(name, sname, email, password);
-  res.status(201).send("user created");
+  if(await createUser(name, sname, email, password)){
+    res.render('login')
+  }else{
+    res.render('signup')
+  }
+
 });
 
-router.get("/check", async function (req, res) {
+router.post("/check", async function (req, res) {
   const { email, password } = req.body;
-
-  await checkUser(email, password);
+  if(await checkUser(email, password)){
+    res.render('index')
+  }else{
+    res.render('login')
+  }
   
 });
 
